@@ -33,6 +33,7 @@ public class HomebankingApplication {
 			Transaction transferenciaRecibida1Melba = new Transaction(TransactionType.CREDIT,1500, "CR INTERBANK",LocalDateTime.now().plusDays(1));
 			Transaction pagoInternetMelba = new Transaction( TransactionType.DEBIT,-1000, "DEBIN PAGO SERVICIO", LocalDateTime.now().plusDays(1));
 			Transaction transferenciaRecibida2Melba = new Transaction( TransactionType.CREDIT,1000, "CR INTERBANK",LocalDateTime.now().plusDays(2));
+
 			Client ana = new Client("Ana", "Gonzalez", "anagonzalez@gmail.com");
 			Account account3 = new Account("VIN003", 12000.0, LocalDate.now());
 			Account account4 = new Account("VIN004", 13000.0, LocalDate.now().plusDays(2));
@@ -40,6 +41,7 @@ public class HomebankingApplication {
 			Transaction transferenciaRecibida1Ana = new Transaction(TransactionType.CREDIT,1000, "CR INTERBANK",LocalDateTime.now().plusDays(2));
 			Transaction pagoInternetAna = new Transaction( TransactionType.DEBIT,-1000, "DEBIN PAGO SERVICIO", LocalDateTime.now().plusDays(1));
 			Transaction transferenciaRecibida2Ana = new Transaction( TransactionType.CREDIT,1000, "CR INTERBANK",LocalDateTime.now().plusDays(2));
+
 			Client luz = new Client("Luz", "Mieres", "luzmieres@gmail.com");
 			Account account5 = new Account("VIN005", 14000.0, LocalDate.now());
 			Account account6 = new Account("VIN006", 15000.0, LocalDate.now().plusDays(3));

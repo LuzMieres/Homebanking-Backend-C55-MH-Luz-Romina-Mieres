@@ -6,13 +6,14 @@ import com.mindhub.homebanking.models.Transaction;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class AccountDTO {
     private Long id;
     private Double balance;
     private LocalDate creationDate;
     private String number;
-    private Set<Transaction> transactions = new HashSet<>();
+    private Set<TransactionDTO> transactions = new HashSet<>();
 
 
     public AccountDTO() {}
@@ -22,6 +23,7 @@ public class AccountDTO {
         this.balance = account.getBalance();
         this.creationDate = account.getCreationDate();
         this.number = account.getNumber();
+        this.transactions = account.getTransactions().stream().map(transaction -> new TransactionDTO(transaction)).collect(Collectors.toSet());
     }
 
     public Long getId() {
@@ -40,7 +42,7 @@ public class AccountDTO {
         return number;
     }
 
-    public Set<Transaction> getTransactions() {
+    public Set<TransactionDTO> getTransactions() {
         return transactions;
     }
 }

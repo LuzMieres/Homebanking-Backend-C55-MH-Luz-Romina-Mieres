@@ -68,6 +68,14 @@ public class Account {
         this.owner = owner;
     }
 
+    public Set<Transaction> getTransactions() {
+        return transactions;
+    }
+
+    public void setTransactions(Set<Transaction> transactions) {
+        this.transactions = transactions;
+    }
+
     @Override
     public String toString() {
         return "Account{" +
